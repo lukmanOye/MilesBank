@@ -1,5 +1,5 @@
 package com.example.opaybanking.model;
 
 public enum TransactionType {
-    CREDIT,DEBIT
+    DEPOSIT, WITHDRAWAL, TRANSFER_IN, TRANSFER_OUT
 }
