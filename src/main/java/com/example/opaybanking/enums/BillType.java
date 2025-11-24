@@ -1,5 +1,5 @@
-package com.example.opaybanking.model;
+package com.example.opaybanking.enums;
 
 public enum BillType {
-    AIRTIME, DATA, ELECTRICITY, TV, OTHER
+    AIRTIME, DATA, ELECTRICITY, TV
 }

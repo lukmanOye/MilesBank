@@ -1,4 +1,4 @@
-package com.example.opaybanking.model;
+package com.example.opaybanking.enums;
 
 public enum Role {
     ADMIN,USER
