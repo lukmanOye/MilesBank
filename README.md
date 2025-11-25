@@ -1,7 +1,6 @@
 # Miles Bank – The Future of Nigerian Digital Banking (2025)
 
 **Live Backend:** https://milesbank-production.up.railway.app  
-**Swagger API Docs:** https://milesbank-production.up.railway.app/swagger-ui.html  
 **Root Endpoint:** `GET /` → `{"message": "Miles Bank API is LIVE"}`
 
 A complete, production-ready, full-stack digital banking backend built from scratch with Spring Boot 3 + Java 17.  
@@ -15,8 +14,7 @@ This is not a school project. This is a real bank backend.
 
 | Feature                          | Status | Description |
 |----------------------------------|--------|-----------|
-| Registration + OTP Login         | Done   | Email + 6-digit OTP (shown in logs when `SKIP_EMAIL=true`) |
-| Dual Currency Wallets (NGN + USD)| Done   | Separate balances, PIN protection |
+| Registration + OTP Login         | Done   | Email + 6-digit OTP (real Gmail SMTP ready) → OTP printed clearly in Railway logs when `SKIP_EMAIL=true` (Railway blocks outbound SMTP on free tier, so we skip email in production to avoid crashes — industry-standard practice for demos & interviews) || Dual Currency Wallets (NGN + USD)| Done   | Separate balances, PIN protection |
 | Virtual Debit Cards (NGN & USD)  | Done   | Create, view, top-up from wallet |
 | Internal Transfers               | Done   | Instant Miles-to-Miles |
 | Cross-Currency Transfers         | Done   | NGN ↔ USD with dynamic rates |
@@ -108,7 +106,6 @@ GET    /api/wallets/admin/all            → View all wallets
 - Spring Data JPA + Hibernate
 - PostgreSQL
 - Maven
-- SpringDoc OpenAPI (Swagger UI)
 - Lombok
 - Paystack SDK
 - Cloudinary
