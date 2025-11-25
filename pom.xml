@@ -72,12 +72,6 @@
             <version>5.5.1</version>
         </dependency>
         <dependency>
-            <groupId>org.springdoc</groupId>
-            <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
-            <version>2.6.0</version>
-        </dependency>
-
-        <dependency>
             <groupId>com.googlecode.libphonenumber</groupId>
             <artifactId>libphonenumber</artifactId>
             <version>8.13.31</version>
@@ -102,7 +96,6 @@
             <artifactId>itext7-core</artifactId>
             <version>7.2.5</version>
             <type>pom</type>
-            <classifier>itextpdf</classifier>
         </dependency>
         <dependency>
             <groupId>com.itextpdf</groupId>
