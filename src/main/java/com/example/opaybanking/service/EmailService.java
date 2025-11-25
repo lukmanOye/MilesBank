@@ -12,8 +12,8 @@ import org.springframework.stereotype.Service;
 @Service
 @ConditionalOnProperty(
         name = "SKIP_EMAIL",
-        havingValue = "true",
-        matchIfMissing = true
+        havingValue = "false",
+        matchIfMissing = false
 )
 public class EmailService {
 
