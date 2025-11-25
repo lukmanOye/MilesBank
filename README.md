@@ -29,57 +29,57 @@ This is not a school project. This is a real bank backend.
 | Full Swagger/OpenAPI Docs        | Done   | Interactive API playground |
 
 ---
-### Live API Endpoints
+### Live API Endpoints (All Secured with JWT)
 
 #### Auth
-POST   /api/auth/register                → Register + generate OTP
-POST   /api/auth/login                   → Login with email + OTP
-POST   /api/auth/resend-otp?email=...    → Resend OTP
-POST   /api/auth/logout                  → Invalidate token
+- `POST   /api/auth/register` → Register user + generate 6-digit OTP  
+- `POST   /api/auth/login` → Login with email + OTP  
+- `POST   /api/auth/resend-otp?email=...` → Resend OTP  
+- `POST   /api/auth/logout` → Invalidate token  
 
 #### Wallets
-POST   /api/wallets/create/ngn           → Create NGN wallet + set PIN
-POST   /api/wallets/create/usd           → Create USD wallet + set PIN
-GET    /api/wallets/my                   → Get both wallets
-GET    /api/wallets/balances             → Current NGN & USD balances
-PUT    /api/wallets/pin/ngn              → Change NGN PIN
-PUT    /api/wallets/pin/usd              → Change USD PIN
+- `POST   /api/wallets/create/ngn` → Create NGN wallet + set PIN  
+- `POST   /api/wallets/create/usd` → Create USD wallet + set PIN  
+- `GET    /api/wallets/my` → Get both NGN & USD wallets  
+- `GET    /api/wallets/balances` → Current balances  
+- `PUT    /api/wallets/pin/ngn` → Change NGN PIN  
+- `PUT    /api/wallets/pin/usd` → Change USD PIN  
 
 #### Transactions
-POST   /api/transactions/internal        → Miles → Miles (instant)
-POST   /api/transactions/cross-currency  → NGN → USD or USD → NGN
-POST   /api/transactions/external        → To any Nigerian bank (Paystack)
-POST   /api/transactions/verify-name     → Name enquiry before transfer
-GET    /api/transactions/my              → My transaction history
-GET    /api/transactions/rates           → Current exchange rates
-GET    /api/transactions/admin/all       → (Admin) All transactions
+- `POST   /api/transactions/internal` → Miles Bank → Miles Bank (instant)  
+- `POST   /api/transactions/cross-currency` → NGN ↔ USD conversion  
+- `POST   /api/transactions/external` → Transfer to any Nigerian bank (via Paystack)  
+- `POST   /api/transactions/verify-name` → Name enquiry before transfer  
+- `GET    /api/transactions/my` → My transaction history  
+- `GET    /api/transactions/rates` → Current USD/NGN rates  
+- `GET    /api/transactions/admin/all` → (Admin) All transactions  
 
 #### Virtual Cards
-POST   /api/card/create/ngn              → Create NGN virtual card
-POST   /api/card/create/usd              → Create USD virtual card
-GET    /api/card/ngn                     → View NGN card details
-GET    /api/card/usd                     → View USD card details
-POST   /api/card/topup/miles/ngn        → Fund card from wallet
+- `POST   /api/card/create/ngn` → Create NGN virtual card  
+- `POST   /api/card/create/usd` → Create USD virtual card  
+- `GET    /api/card/ngn` → View NGN card details  
+- `GET    /api/card/usd` → View USD card details  
+- `POST   /api/card/topup/miles/ngn` → Fund card from wallet  
 
 #### Bill Payments
-POST   /api/bill/pay                     → Pay airtime/data/TV/electricity
-GET    /api/bill/data-plans/MTN          → Get MTN data bundles
-GET    /api/bill/tv-plans/DSTV           → Get DSTV packages
-GET    /api/bill/history                 → Bill payment history
+- `POST   /api/bill/pay` → Pay airtime, data, TV, electricity  
+- `GET    /api/bill/data-plans/MTN` → Get MTN data bundles  
+- `GET    /api/bill/tv-plans/DSTV` → Get DSTV packages  
+- `GET    /api/bill/history` → Bill payment history  
 
 #### PDF Receipts & History
-GET    /api/history/all                  → Full transaction history
-GET    /api/history/pdf/transaction/123 → Download PDF receipt
+- `GET    /api/history/all` → Full transaction history  
+- `GET    /api/history/pdf/transaction/{id}` → Download bank-grade PDF receipt  
 
 #### Users & Profile
-GET    /api/users/my-profile             → Get logged-in user details
-PUT    /api/users/update-profile-picture → Upload photo (Cloudinary)
-GET    /api/users/all                    → (Admin) List all users
+- `GET    /api/users/my-profile` → Get logged-in user details  
+- `PUT    /api/users/update-profile-picture` → Upload photo (Cloudinary)  
+- `GET    /api/users/all` → (Admin) List all users  
 
 #### Admin Only
-GET    /api/admin/rates                  → View current rates
-PUT    /api/admin/rates                  → Update USD/NGN rates
-GET    /api/wallets/admin/all            → View all wallets
+- `GET    /api/admin/rates` → View current exchange rates  
+- `PUT    /api/admin/rates` → Update USD/NGN rates  
+- `GET    /api/wallets/admin/all` → View all user wallets
 
 ---
 
