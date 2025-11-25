@@ -41,14 +41,7 @@ public class SecurityConfig {
                                 "/api/transactions/verify-name",
                                 "/api/transactions/rates",
                                 "/api/banks/**",
-                                "/",
-                                "/v3/api-docs/**",
-                                "/v3/api-docs",
-                                "/swagger-ui/**",
-                                "/swagger-ui.html",
-                                "/swagger-ui/index.html",
-                                "/webjars/**",
-                                "/swagger-resources/**"
+                                "/"
                         ).permitAll()
 
 
