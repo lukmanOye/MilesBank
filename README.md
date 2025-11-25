@@ -6,7 +6,7 @@
 A complete, production-ready, full-stack digital banking backend built from scratch with Spring Boot 3 + Java 17.  
 Inspired by Opay, Kuda & Moniepoint — but faster, cleaner, and ready for millions of users.
 
-This is not a school project. This is a real bank backend.
+This is a real bank backend.
 
 ---
 
@@ -26,7 +26,7 @@ This is not a school project. This is a real bank backend.
 | Admin Panel Endpoints            | Done   | Full control over users, wallets, rates |
 | Exchange Rate Management         | Done   | Admin sets live USD/NGN rate |
 | JWT + Role-Based Security        | Done   | USER & ADMIN roles |
-| Full Swagger/OpenAPI Docs        | Done   | Interactive API playground |
+
 
 ---
 ### Live API Endpoints (All Secured with JWT)
