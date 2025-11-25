@@ -3,12 +3,18 @@ package com.example.opaybanking.service;
 import jakarta.mail.MessagingException;
 import jakarta.mail.internet.MimeMessage;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.mail.javamail.MimeMessageHelper;
 import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
 
 @Service
+@ConditionalOnProperty(
+        name = "SKIP_EMAIL",
+        havingValue = "true",
+        matchIfMissing = true
+)
 public class EmailService {
 
     private final JavaMailSender mailSender;
